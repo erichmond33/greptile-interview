@@ -1,0 +1,88 @@
+{% load static %}
+{% load tz %}
+
+<div class="container-fluid mb-0 pb-5 footer">
+    <div class="container mb-0">
+        <div class="row py-5">
+            <div class="col-md-4 col-12 mb-3">
+                <div class="text-md-start text-center">
+                    <h4 class="mb-4">
+                        About us
+                    </h4>
+                    <div>
+                        <p>
+                            Greptile.com is a platform dedicated to helping developers search, understand, and collaborate on code efficiently. Our mission is to make codebases more accessible and easier to navigate for teams of all sizes.
+                        </p>
+                        <p>
+                            We value open collaboration, transparency, and empowering developers with the right tools to accelerate software development and learning.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row ps-md-5 p-auto">
+                    <div class="col-6 mb-5">
+                        <div class="text-md-center text-center">
+                            <h4 class="mb-4">
+                                Socials
+                            </h4>
+                            <p>
+                                <a href="#">
+                                    Twitter
+                                </a>
+                            </p>
+                            <p>
+                                <a href="#">
+                                    GitHub
+                                </a>
+                            </p>
+                            <p>
+                                <a href="#">
+                                    LinkedIn
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 mx-auto">
+                        <div class="text-md-center text-center">
+                            <h4 class="mb-4">
+                                Get in touch
+                            </h4>
+                                <p>
+                                    <a href="#">
+                                        Email
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        Contact Form
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        Visit Website
+                                    </a>
+                                </p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex justify-content-md-center justify-content-center align-items-center h-100 w-100 flex-grow-1">
+                            <picture>
+                                <img src="{% static 'website/images/logo-full.svg' %}" alt="Greptile Logo" class=" img-fluid" width="370px">
+                            </picture>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div>
+            <div class="col-12 pt-5 text-center border-top">
+                <a href="#">
+                © Greptile.com {% now "Y" %}. All rights reserved.
+                <br>
+                123 Developer Lane, San Francisco, CA 94105
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

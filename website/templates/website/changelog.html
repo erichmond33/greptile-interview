@@ -1,0 +1,40 @@
+{% extends "website/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="container mt-5 min-vh-100">
+    <div class="row h-100">
+        <div class="col-lg-10 col-12 mx-auto">
+            <h1>{{ repo.name }}</h1>
+            <h4 class="thin mb-5">[ Changelog ]</h4>
+            {% for log in changelog_entries %}
+            <div class="repo-card p-2 mb-4">
+                <div class="d-flex justify-content-end m-0">
+                    <small class="text-muted">{{ log.created_at|date:"Y-m-d" }}</small>
+                </div>
+                {% autoescape off %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ log.title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ log.date|date:"Y-m-d" }}</h6>
+                    <hr>
+                    {{ log.content_html }}
+                                    
+                    <div class="mb-0">
+                        <div class="d-flex justify-content-end m-0 p-0">
+                            <button type="button" class="btn p-0">
+                                <a href="{% url 'details' %}">
+                                    <p class="repo-card-bottom-text py-1 px-2 mb-0">view details >></p>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                {% endautoescape %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

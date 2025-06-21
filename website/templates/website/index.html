@@ -1,0 +1,29 @@
+{% extends "website/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="container mt-5 min-vh-100">
+    <div class="row h-100">
+        <div class="col-lg-10 col-12 py-0 mx-auto">
+            <h4 class="thin">[ Changelog Repositorys ]</h4>
+            {% for repo in repos %}
+            <a href="{% url 'changelog' repo.id %}">
+                <div class="repo-card border-bottom p-2">
+                    <h3 class="mb-4">{{ repo.name }}</h3>
+                    <p class="m-0">Last updated: {{ repo.last_update }}</p>
+                </div>
+                <div class="mb-3 repo-card-bottom">
+                    <div class="d-flex justify-content-end">
+                        
+                        <p class="repo-card-bottom-text px-2 mb-0">view logs >></p>
+                        
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

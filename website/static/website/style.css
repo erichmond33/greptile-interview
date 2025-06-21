@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'Old';
+    src: url('./fonts/Old2.otf');
+}
+
+@font-face {
+    font-family: RF;
+    src: url('./fonts/RF.woff2');
+}
+
+@font-face {
+    font-family: 'Orbiter';
+    src: url('./fonts/orbiter.otf');
+}
+:root {
+    --success: #04c983;
+    --greptile-green: #107a4d;
+    --greptile-green-transparent: rgba(16, 122, 77, 0.2);
+    --dots: #73737320;
+    --radius: 0px;
+    --white: rgba(249, 249, 249, 1);
+    --white-transparent: rgba(249, 249, 249, 1);
+    --tan: #ebe7df;
+    --nav-color: white;
+}
+body {
+    background-color: rgb(249 247 243/var(--tw-bg-opacity,1));
+    background-image: url('./images/texture.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Geist Mono", monospace;
+    color: black;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    position: relative;
+}
+h1, h2, h3 {
+    font-family: Orbiter;
+}
+.repo-card {
+    background-color: var(--white);
+}
+.repo-card-bottom {
+    background-color: var(--greptile-green-transparent);
+}
+.repo-card-bottom-text {
+    background-color: var(--greptile-green);
+    color: var(--white);
+    width: fit-content;
+    font-size: .875rem;
+}
+.thin {
+    font-family: "Geist Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--greptile-green);
+}
+.footer {
+    background-color: var(--white-transparent);
+    backdrop-filter: blur(10px);
+}
+.offcanvas {
+    height: 100vh;
+}
+
+
+.nav-item {
+    font-size: 1.25em;
+}
+.nav-link .nav-link.active {
+    color: var(--nav-color);
+}
+
+.nav-link {
+    color: var(--nav-color);
+    font-size: 1rem;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: var(--nav-color);
+}
+
+.navbar {
+    background-color: var(--white-transparent);
+    backdrop-filter: blur(10px);
+}
+
+.nav-body {
+    border-radius: 0;
+    background: var(--greptile-green);
+}
+
+#menu {
+    background-color: var(--greptile-green);
+    border-radius: 0;
+}

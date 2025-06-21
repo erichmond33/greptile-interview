@@ -1,0 +1,5 @@
+website/keys.env
+uwsgi.ini
+uwsgi.pid
+uwsgi.log
+/.vscode

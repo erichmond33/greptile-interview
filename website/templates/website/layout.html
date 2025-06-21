@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'website/bootstrap.css' %}" rel="stylesheet">
+    <script src="{% static 'website/bootstrap.bundle.min.js' %}"></script>
+    <link href="{% static 'website/style.css' %}" rel="stylesheet">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <title></title>
+    {% block head %}
+    {% endblock %}
+</head>
+<body class="{% block body-class %} {% endblock %}">
+
+    <nav class="navbar navbar-expand-lg sticky-top py-0 border-bottom" id="nav">
+        <div class="container mb-0 px-md-4">
+            <a class="navbar-brand white d-flex align-items-center" href="{% url 'index' %}">
+                <picture>
+                    <img id="logo" src="{% static 'website/images/logo-full.svg' %}" alt="logo" width="150"
+                        class="d-inline-block align-text-top {% if not request.resolver_match.url_name == 'index' %} invert {% endif %}">
+                </picture>
+            </a>
+
+            <div class="bg-white d-flex align-items-center p-sm-0 p-0">
+                <button class="navbar-toggler p-sm-3 p-2_5" id="menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <img src="{% static 'website/images/menu2.svg' %}" alt="Menu" width="25">
+                </button>
+            </div>
+    
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav nav-body justify-content-end align-items-center ms-auto py-2 px-2">
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'index' %}">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+    </nav>
+    
+
+    {% block body %}    
+    {% endblock %}
+
+
+    {% include 'website/footer.html' %}
+
+    {% csrf_token %}
+</body>
+</html>
