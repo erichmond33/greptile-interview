@@ -1,3 +1,7 @@
+# Demo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jvnEXVmyP9E?si=imdHt35NmJAOJ69M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 # Design Decisions
 
 ### Technical Foundation
@@ -10,11 +14,16 @@ Yes, I of course used LLMs to help make this. I'm basically using this to save k
 
 Having built many CLI tools for personal use, I understand what makes them usable. This changelog generator takes users through three inputs: the repo, commit ranges by number or date, and finally the changelog title. The process is straightforward: gather relevant GitHub commits, extract their differences, and use that context in the LLM prompt (or Greptile API call in this case) to generate the changelogs. This is then saved to the database to be displayed.
 
+![Screenshot of the application interface](img1.jpg)
+
 ### Web Design
 
 This simple web app only has two pages: 1. the main page, which consists of each owner/repo that a changelog is generated for, sorted by the most recent change. Clicking on one of these brings you to the changelog page for that specific repo, where each changelog entry is displayed, including the title, the log, and its creation date. Not too complex.
 
 The styling is aimed to align with the Greptile brand. I enjoy the challenge of adapting design languages from various brands. Of course, I would probably change this a bunch the more time I spent working on it – unlike back-end functionality that has clear functionality, front-end design is very much iterative and constantly improving.
+
+![](img2.jpg)
+![](img3.jpg)
 
 # Setup
 
