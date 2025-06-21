@@ -1,7 +1,3 @@
-# Demo
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jvnEXVmyP9E?si=imdHt35NmJAOJ69M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 # Design Decisions
 
 ### Technical Foundation
@@ -33,7 +29,7 @@ The styling is aimed to align with the Greptile brand. I enjoy the challenge of 
 
 git clone https://github.com/erichmond33/greptile-interview.git
 
-cd  Greptile
+cd greptile-interview
 
 # Activate the env (Mac) & install packages
 
@@ -52,7 +48,7 @@ echo "GREPTILE_API_KEY=your_greptile_api_key_here" >> website/keys.env
 
 ```zsh
 
-# Start localhost
+# Start localhost (ctrl + c to quit)
 
 python3 manage.py runserver
 
