@@ -1,3 +1,7 @@
+# Demo video
+
+[Watch the demo video on YouTube](https://www.youtube.com/watch?v=jvnEXVmyP9E)
+
 # Design Decisions
 
 ### Technical Foundation
